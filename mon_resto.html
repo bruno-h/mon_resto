@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Resto Bruno H</title>
+    <script src="/assets/jquery.js"></script>
+    <link href="/normalize.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css' />
+    <style>
+      body {
+        font-family: helvetica, sans-serif;
+        margin: 0 auto;
+        max-width: 600px;
+        background: #232323;
+      }
+      div {
+        height: 200px;
+        background-size: cover;
+        position: relative;
+        margin: 40px 0 0 0;
+        border-radius: 12px;
+      }
+      h1 {
+        font-family: 'Kaushan Script', cursive;
+        text-align: center;
+        font-size: 75px;
+        color: #aaaaaa;
+        margin: 60px 0 0 0;
+      }
+      h2 {
+        text-align: center;
+        color: #bbbbbb;
+        margin: 0px 0 70px 0;
+      }
+      p {
+        color: rgba(255,255,255,1);
+        background: black;
+        background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+        background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4       ));
+        background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+        padding: 10px;
+        line-height: 28px;
+        text-align: justify;
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        height: 30px;
+        transition: height .5s;
+        -webkit-transition: height .5s;
+        -moz-transition: height .5s;
+      }
+      small {
+        opacity: 0;
+      }
+
+      .show-description p {
+        height: 150px;
+      }
+      .show-description small {
+        opacity: 1;
+      }
+      .first{
+        background-image: url("http://img15.hostingpics.net/pics/772533horsdoeuvre.png");
+      }
+      .second{
+        background-image: url("http://img15.hostingpics.net/pics/695327Sautdeporc.png");
+      }
+      .dessert{
+        background-image: url("http://img15.hostingpics.net/pics/657028Boulesssame.png");
+      }
+      .price {
+        float: right;
+      }
+
+      @media (max-width: 500px) {
+        h1 {
+          font-size: 50px;
+          margin-top: 20px;
+          line-height: 40px;
+        }
+        h2 {
+          font-size: 20px;
+          margin: 20px 0 30px 0;
+        }
+        div {
+          margin: 20px 12px 0 12px;
+        }
+        p {
+          font-size: 20px;
+          line-height: 24px;
+        }
+        small {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>ici on mange</h1>
+    <h2>resto express mais délicieusement bon !</h2>
+    <div class="first">
+      <p>Salade crevettes tigre de Madagascar <span class="price">5,50€</span><br />
+      <small>Choux chinois (nappa) - pois mange tout - gingembre finement hâché pour donner du tonique et un léger piquant - vermicelle de riz transparente - sauces soja et nuoc mam pour relever le goût - le tout parfumé à l'huile de sésame et feuilles de coriandre fraîches - grosses crevettes tigre de Madagascar</small></p>
+    </div>
+
+    <div class="second">
+      <p>Sauté de porc royal <span class="price">7€</span><br />
+      <small>Généreux petits carrés de porc marinés sautés au wok sur lit de feuilles de salade - discret parfum d'épices d'Extrême Orient - nappage sauce aigre douce échalote finement ciselée - quartiers de tomate grappe - riz blanc parfumé nature de Thaïlande</small></p>
+    </div>
+  
+    <div class="dessert">
+      <p>Délice de boules de riz fourrées <span class="price">4,50€</span><br />
+      <small>Baignée de pâte farine de riz en boule - fourrage pâte de soja cuite vapeur agrémentée de fines lamelles de noix de coco fraîche - boule enrobée de graines de sésame craquant sous la dent pour un arôme authentique</small></p>
+    </div>
+
+    <script>
+      $('div').on('click', function() {
+        $(this).toggleClass('show-description');
+      });
+    </script>
+  </body>
+</html>
